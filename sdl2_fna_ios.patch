@@ -139,7 +139,7 @@ new file mode 100644
 index 000000000..4dd7cbf8e
 --- /dev/null
 +++ b/src/SDL_FNA_tvos_stubs.c
-@@ -0,0 +1,130 @@
+@@ -0,0 +1,171 @@
 +//
 +//  SDL_FNA_tvos_stubs.c
 +//  A bunch of empty function definitions for Android/Windows-specific stuff in SDL2.
@@ -270,3 +270,45 @@ index 000000000..4dd7cbf8e
 +extern void emscripten_cancel_main_loop(void)
 +{
 +}
++
++// FontStashSharp
++extern int FT_Init_FreeType(void *alibrary)
++{
++	return -1;
++}
++
++extern int FT_New_Memory_Face(void *library, void *memoryHandle, int file_size, int face_index, void *aface)
++{
++	return -1;
++}
++
++extern int FT_Done_Face(void *face)
++{
++	return -1;
++}
++
++extern unsigned int FT_Get_Char_Index(void *face, unsigned int charcode)
++{
++	return 0;
++}
++
++extern int FT_Set_Pixel_Sizes(void *face, unsigned int pixel_width, unsigned int pixel_height)
++{
++	return -1;
++}
++
++extern int FT_Load_Glyph(void *face, unsigned int glyph_index, int load_flags)
++{
++	return -1;
++}
++
++extern int FT_Render_Glyph(void *slot, void *render_mode)
++{
++	return -1;
++}
++
++extern int FT_Get_Kerning(void *face, unsigned int left_glyph, unsigned int right_glyph, unsigned int kern_mode, void *kerning)
++{
++	return -1;
++}
++
